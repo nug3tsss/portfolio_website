@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Markfolio{% endblock %}</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Markfolio</a></li>
+            <li><a href="/profile">About me</a></li>
+
+            <li class="dropdown">
+                <a href="/works">My works</a>
+                <ul class="dropdown-menu">
+                    <li><a href="/to-uppercase">Convert string to uppercase</a></li>
+                    <li><a href="/area-of-circle">Find area of a circle</a></li>
+                    <li><a href="/area-of-triangle">Find area of a triangle</a></li>
+                </ul>
+            </li>
+
+            <li><a href="/contact">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>
