@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import math
 
 app = Flask(__name__)
 
@@ -27,19 +28,28 @@ def works():
 def to_uppercase():
     result = None
     if request.method == 'POST':
-        input_string = request.form.get('inputString', '')
+        input_string = request.form.get('input_string', '')
         result = input_string.upper()
     return render_template('touppercase.html', result=result)
 
 # "Area of a circle" PAGE
 @app.route('/area-of-circle', methods=['GET', 'POST'])
 def area_of_circle():
-    return render_template('areaofcircle.html')
+    result = None
+    if request.method == 'POST':
+        input_radius = float(request.form.get('input_radius', 0))
+        result = round((math.pi * math.pow(input_radius, 2)), 2)
+    return render_template('areaofcircle.html', result=result)
 
 # "Area of a triangle" PAGE
 @app.route('/area-of-triangle', methods=['GET', 'POST'])
 def area_of_triangle():
-    return render_template('areaoftriangle.html')
+    result = None
+    if request.method == 'POST':
+        input_base = float(request.form.get('input_base', 0))
+        input_height = float(request.form.get('input_height', 0))
+        result = round((0.5 * input_base * input_height), 2)
+    return render_template('areaoftriangle.html', result=result)
 
 if __name__ == "__main__":
     app.run(debug=True)

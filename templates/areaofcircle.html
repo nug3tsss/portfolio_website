@@ -3,5 +3,15 @@
 {% block title %}Works - Markfolio{% endblock %}
 
 {% block content %}
-<h1>Find the area of circle!</h1>
+<h1>Find the area of circle</h1>
+
+<form action="/area-of-circle" method="post">
+    <label for="inputRadius">Enter a radius:</label>
+    <input type="number" id="inputRadius" name="input_radius">
+    <input type="submit" value="Calculate">
+</form>
+
+{% if result %}
+<p>Area of given circle: {{ result }}</p>
+{% endif %}
 {% endblock %}

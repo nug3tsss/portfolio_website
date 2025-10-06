@@ -3,5 +3,19 @@
 {% block title %}Works - Markfolio{% endblock %}
 
 {% block content %}
-<h1>Find the area of triangle!</h1>
+<h1>Find the area of triangle</h1>
+
+<form action="/area-of-triangle" method="post">
+    <label for="inputBase">Enter a base:</label>
+    <input type="number" id="inputBase" name="input_base">
+
+    <label for="inputHeight">Enter a height:</label>
+    <input type="number" id="inputHeight" name="input_height">
+
+    <input type="submit" value="Calculate">
+</form>
+
+{% if result %}
+<p>Area of given triangle: {{ result }}</p>
+{% endif %}
 {% endblock %}
