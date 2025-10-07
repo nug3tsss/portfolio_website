@@ -1,25 +1,28 @@
+/* APPLY TO EVERY PAGES */
+/* general margin and padding */
 *{
     margin: 0;
     padding: 0;
 }
 
-
+/* background image */
 body{
-    min-height: 100vh;
-    background-image: url(images/body_background.jpg);
+    background-image: url(images/body_background.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    min-height: 100vh;
     font-family: 'Consolas', 'Fira Code', 'Source Code Pro', monospace;
 }
 
-
+/* NAVBAR */
+/* glass-look navbar */
 nav{
-    background-color: rgba(63, 61, 57, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
 }
 
-
+/* links arrangement and formatting */
 nav ul{
     width: 100%;
     list-style: none;
@@ -28,69 +31,95 @@ nav ul{
     align-items: center;
 }
 
-
+/* links design */
 nav li{
-    height: 50px;
-    background-color: #17181a;
-    margin: 5px;
-    border-radius: 25px;
+    background-color: #0f0f10;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
     border: 1px solid #b6a589;
+    border-radius: 25px;
+    height: 30px;
+    margin: 5px;
 }
 
-
+/* links text design */
 nav a{
     height: 100%;
-    padding: 0 30px;
+    padding: 0 20px;
     text-decoration: none;
+    color: #fcbe56;
     display: flex;
     align-items: center;
-    color: #b6a589;
     border-radius: 25px;
 }
 
-
+/* links behavior when hovered */
 nav a:hover{
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-
+/* first link format */
 nav li:first-child{
     margin-right: auto;
 }
 
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: rgba(63, 61, 57, 0.1);
+/* KITTY-STYLE TERMINAL */
+/* terminal window */
+.terminal{
+    width: max-content;
+    margin: 330px auto;
+    background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
-    list-style: none;
-    padding: 0;
-    margin: 5px;
+    border: 1px solid #b6a589;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-
-.dropdown-menu li a {
-    padding: 10px 20px;
-    display: block;
-    color: #b6a589;
-    white-space: normal;
-    padding: 10px 25px;
-    text-align: left;
-    word-break: break-word;
+/* terminal header recreation */
+.terminal-header{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #b6a589;
 }
 
-
-.dropdown-menu li a:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+/* three dots like in mac devices */
+.terminal-header .dot{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
 }
 
+.dot.red{ background-color: #ff5f56; }
+.dot.yellow{ background-color: #ffbd2e; }
+.dot.green{ background-color: #27c93f; }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
+/* main terminal body */
+.terminal-body{
+    padding: 20px;
+    font-family: 'Consolas', 'Fira Code', 'Source Code Pro', monospace;
+    color: #fcbe56;
+    white-space: nowrap;
+    font-size: large;
 }
 
+/* guest prompt text color */
+.guest-prompt{
+    color: white;
+}
 
-.dropdown {
-    position: relative;
+.terminal-body p{
+    margin: 8px 0;
+}
+
+.terminal-body a{
+    color: #fbb166;
+}
+
+.terminal-body a:hover{
+    color: white;
 }

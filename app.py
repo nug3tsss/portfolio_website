@@ -24,7 +24,7 @@ def works():
     return render_template('works.html')
 
 # "Convert to uppercase" PAGE
-@app.route('/to-uppercase', methods=['GET', 'POST'])
+@app.route('/works/to-uppercase', methods=['GET', 'POST'])
 def to_uppercase():
     result = None
     if request.method == 'POST':
@@ -33,7 +33,7 @@ def to_uppercase():
     return render_template('touppercase.html', result=result)
 
 # "Area of a circle" PAGE
-@app.route('/area-of-circle', methods=['GET', 'POST'])
+@app.route('/works/area-of-circle', methods=['GET', 'POST'])
 def area_of_circle():
     result = None
     if request.method == 'POST':
@@ -42,7 +42,7 @@ def area_of_circle():
     return render_template('areaofcircle.html', result=result)
 
 # "Area of a triangle" PAGE
-@app.route('/area-of-triangle', methods=['GET', 'POST'])
+@app.route('/works/area-of-triangle', methods=['GET', 'POST'])
 def area_of_triangle():
     result = None
     if request.method == 'POST':

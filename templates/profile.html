@@ -3,5 +3,18 @@
 {% block title %}Profile - Markfolio{% endblock %}
 
 {% block content %}
-<h1>Welcome to the profile page!</h1>
+<div class="terminal">
+    <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+    </div>
+    <div class="terminal-body">
+        <p><span class="guest-prompt">[guest@markfolio]$ </span>Hello! My name is Mark, and this is my portfolio: Markfolio!</p>
+        <p><span class="guest-prompt">[guest@markfolio]$ </span>In my website you will:</p>
+        <p><span class="guest-prompt">[guest@markfolio]$ </span><a href="/profile">Get to know me!</a></p>
+        <p><span class="guest-prompt">[guest@markfolio]$ </span><a href="/works">See my programming works!</a></p>
+        <p><span class="guest-prompt">[guest@markfolio]$ </span><a href="/contact">Be able to connect with me!</a></p>
+    </div>
+</div>
 {% endblock %}
