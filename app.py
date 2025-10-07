@@ -3,6 +3,10 @@ import math
 
 app = Flask(__name__)
 
+@app.context_processor
+def get_path():
+    return dict(current_path=request.path)
+
 # HOME PAGE
 @app.route('/')
 def home():

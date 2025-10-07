@@ -3,19 +3,29 @@
 {% block title %}Works - Markfolio{% endblock %}
 
 {% block content %}
-<h1>Find the area of triangle</h1>
+<div class="terminal">
+    <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+    </div>
 
-<form action="/area-of-triangle" method="post">
-    <label for="inputBase">Enter a base:</label>
-    <input type="number" id="inputBase" name="input_base">
+    <div class="terminal-body">
+    <p><span class="guest-prompt">[guest@markfolio]$ </span>Find the area of triangle</p>
 
-    <label for="inputHeight">Enter a height:</label>
-    <input type="number" id="inputHeight" name="input_height">
+    <form action="/works/area-of-triangle" method="post">
+        <label for="inputBase"><span class="guest-prompt">[guest@markfolio]$ </span>Enter a base:</label>
+        <input type="number" id="inputBase" name="input_base"><br>
 
-    <input type="submit" value="Calculate">
-</form>
+        <label for="inputHeight"><span class="guest-prompt">[guest@markfolio]$ </span>Enter a height:</label>
+        <input type="number" id="inputHeight" name="input_height">
 
-{% if result %}
-<p>Area of given triangle: {{ result }}</p>
-{% endif %}
+        <input type="submit" value="Calculate">
+    </form>
+
+    {% if result %}
+    <p><span class="guest-prompt">[guest@markfolio]$ </span>{{ result }}</p>
+    {% endif %}
+    </div>
+</div>
 {% endblock %}

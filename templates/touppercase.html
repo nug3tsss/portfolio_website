@@ -3,15 +3,25 @@
 {% block title %}Works - Markfolio{% endblock %}
 
 {% block content %}
-<h1>Convert String to Uppercase</h1>
+<div class="terminal">
+    <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+    </div>
 
-<form action="/to-uppercase" method="post">
-    <label for="inputString">Enter a string:</label>
-    <input type="text" id="inputString" name="input_string">
-    <input type="submit" value="Convert">
-</form>
+    <div class="terminal-body">
+        <p><span class="guest-prompt">[guest@markfolio]$ </span>Convert String to Uppercase</p>
 
-{% if result %}
-<p>Converted string: {{ result }}</p>
-{% endif %}
+        <form action="/works/to-uppercase" method="post">
+            <span class="guest-prompt">[guest@markfolio]$ </span><label for="inputString">Enter a string:</label>
+            <input type="text" id="inputString" name="input_string">
+            <input type="submit" value="Convert">
+        </form>
+
+        {% if result %}
+        <p><span class="guest-prompt">[guest@markfolio]$ </span>{{ result }}</p>
+        {% endif %}
+    </div>
+</div>
 {% endblock %}

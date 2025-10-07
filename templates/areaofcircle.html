@@ -3,15 +3,25 @@
 {% block title %}Works - Markfolio{% endblock %}
 
 {% block content %}
-<h1>Find the area of circle</h1>
+<div class="terminal">
+    <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+    </div>
 
-<form action="/area-of-circle" method="post">
-    <label for="inputRadius">Enter a radius:</label>
-    <input type="number" id="inputRadius" name="input_radius">
-    <input type="submit" value="Calculate">
-</form>
+    <div class="terminal-body">
+        <p><span class="guest-prompt">[guest@markfolio]$ </span>Area of circle calculator</p>
 
-{% if result %}
-<p>Area of given circle: {{ result }}</p>
-{% endif %}
+        <form action="/works/area-of-circle" method="post">
+            <label for="inputRadius"><span class="guest-prompt">[guest@markfolio]$ </span>Enter a radius:</label>
+            <input type="number" id="inputRadius" name="input_radius">
+            <input type="submit" value="Calculate">
+        </form>
+
+        {% if result %}
+        <p><span class="guest-prompt">[guest@markfolio]$ </span>{{ result }}</p>
+        {% endif %}
+    </div>
+</div>
 {% endblock %}
