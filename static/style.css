@@ -78,7 +78,7 @@ nav li:first-child{
 /* terminal window */
 .terminal{
     width: max-content;
-    margin: 330px auto;
+    margin: 20vh auto;
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
     border: 1px solid #b6a589;
@@ -113,14 +113,13 @@ nav li:first-child{
 /* main terminal body */
 .terminal-body{
     padding: 20px;
-    font-family: 'Consolas', 'Fira Code', 'Source Code Pro', monospace;
-    color: #fcbe56;
+    color: white;
     white-space: nowrap;
     font-size: large;
 }
 
 /* guest prompt text color */
-.guest-prompt{
+.user{
     color: white;
 }
 
@@ -129,7 +128,7 @@ nav li:first-child{
 }
 
 .terminal-body a{
-    color: #fbb166;
+    color: #fcbe56;
 }
 
 .terminal-body a:hover{
@@ -138,7 +137,7 @@ nav li:first-child{
 
 /* ROFI-STYLE */
 /* rofi title divider */
-.rofi-header {
+.rofi-header{
     border-bottom: 2px solid #fcbe56;
     display: block;
     padding-bottom: 4px;
@@ -150,7 +149,51 @@ nav li:first-child{
 }
 
 /* select highlight */
-.terminal-body a:hover {
+.terminal-body a:hover{
     background-color: rgba(252, 190, 86, 0.15);
     color: white;
+}
+
+/* NEOFETCH-STYLE */
+/* Terminal body flex for image + info */
+.terminal-body.neofetch{
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* Profile image styling */
+.profile-img{
+    width: 250px;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+}
+
+/* Info section styling */
+.terminal-body.neofetch .info{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.terminal-body.neofetch .category{
+    color: #fcbe56;
+}
+
+/* Space between info lines */
+.terminal-body.neofetch .info p{
+    margin: 6px 0;
+}
+
+/* Color palette row */
+.color-palette{
+    display: flex;
+    margin-top: 12px;
+}
+
+/* Individual color block */
+.color-block{
+    width: 30px;
+    height: 20px;
 }

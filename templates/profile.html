@@ -9,12 +9,28 @@
         <span class="dot yellow"></span>
         <span class="dot green"></span>
     </div>
-    <div class="terminal-body">
-        <p><span class="guest-prompt">[guest@markfolio]$ </span>Hello! My name is Mark Christian S. Abucejo</p>
-        <p><span class="guest-prompt">[guest@markfolio]$ </span>I'm currently enrolled in BS CPE 2-3...</p>
-        <p><span class="guest-prompt">[guest@markfolio]$ </span>...for the subject Data Structures and Algorithms</p>
-        <p><span class="guest-prompt">[guest@markfolio]$ </span>My favorite saying is...</p>
-        <p><span class="guest-prompt">[guest@markfolio]$ </span>Pleasure to meet you!</p>
+    <div class="terminal-body neofetch">
+    <img src="{{ url_for('static', filename='images/profile_img.jpg')}}" alt="Profile Image" class="profile-img">
+        <div class="info">
+            <p class="user">mark@markfolio</p>
+            <p>---------------</p>
+            <p><span class="category">Name: </span>Mark Christian S. Abucejo</p>
+            <p><span class="category">Section: </span>BS CPE 2-3</p>
+            <p><span class="category">Subject: </span>Data Structures and Algorithms</p>
+            <p><span class="category">Hobbies: </span>Gaming, drawing, music, programming, reading</p>
+            <p class="category" style="font-style: italic;">"A person is smart. People are dumb." - Agent K</p>
+        
+            <div class="color-palette">
+                <div class="color-block" style="background-color:#e9ddad;"></div>
+                <div class="color-block" style="background-color:#03252f;"></div>
+                <div class="color-block" style="background-color:#c8ccd5;"></div>
+                <div class="color-block" style="background-color:#213e50;"></div>
+                <div class="color-block" style="background-color:#927f7b;"></div>
+                <div class="color-block" style="background-color:#e8d7bd;"></div>
+                <div class="color-block" style="background-color:#79888b;"></div>
+                <div class="color-block" style="background-color:#c0baaa;"></div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
