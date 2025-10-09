@@ -81,13 +81,13 @@ Activate it:
 ### 4. 📃 Install the Required Libraries
 
 ```bash
-pip install -r requirements.txt
+pip install flask
 ```
 
 ### 5. 🏃 Run the Application
 
 ```bash
-python main.py
+python app.py
 ```
 
 ---
