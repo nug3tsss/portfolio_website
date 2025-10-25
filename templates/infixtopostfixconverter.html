@@ -3,7 +3,26 @@
 {% block title %}Works - Markfolio{% endblock %}
 
 {% block content %}
+<div class="terminal">
+    <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+    </div>
 
-<p>WELCOME TO INFIX TO POSTFIX CONVERTER!</p>
+    <div class="terminal-body">
+        <p><span class="guest-prompt">[guest@markfolio]$ </span><a href="/works">Go back to My Works</a></p>
+        <p><span class="guest-prompt">[guest@markfolio]$ </span>Convert infix to postfix</p>
 
+        <form action="/works/infix-to-postfix-converter" method="post">
+            <span class="guest-prompt">[guest@markfolio]$ </span><label for="inputInfix"></label>Enter an infix expression:</label>
+            <input type="text" id="inputInfix" name="input_infix">
+            <input type="submit" value="Convert to postfix">
+        </form>
+
+        {% if result %}
+        <p><span class="guest-prompt">[guest@markfolio]$ </span>Postfix: {{ result }}</p>
+        {% endif %}
+    </div>
+</div>
 {% endblock %}

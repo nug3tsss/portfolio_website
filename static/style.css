@@ -197,3 +197,31 @@ nav li:first-child{
     width: 30px;
     height: 20px;
 }
+
+/* TERMINAL INPUTS */
+/* Text & number input fields */
+.terminal input[type="text"],
+.terminal input[type="number"] {
+    background: none;
+    color: #fcbe56;
+    border: none;
+    border-bottom: 1px solid #b6a589;
+    font-family: inherit;
+    font-size: large;
+    outline: none;
+    padding: 4px 6px;
+    width: 200px;
+}
+
+/* Submit button */
+.terminal input[type="submit"] {
+    background: rgba(252, 190, 86, 0.1);
+    border: 1px solid #fcbe56;
+    color: #fcbe56;
+    font-family: inherit;
+    font-size: large;
+    padding: 4px 10px;
+    margin-left: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}

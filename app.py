@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from modules.stack import Stack
 import math
 
 app = Flask(__name__)
@@ -58,7 +59,44 @@ def area_of_triangle():
 # "Infix to postfix converter" PAGE
 @app.route('/works/infix-to-postfix-converter', methods=['GET', 'POST'])
 def visualize_linked_list():
-    return render_template('infixtopostfixconverter.html')
+    result = None
+    if request.method == 'POST':
+        ops = Stack()
+
+        ord_of_precedence = {
+            "^": 3,
+            "*": 2,
+            "/": 2,
+            "+": 1,
+            "-": 1
+        }
+
+        def start_shunting_yard_algorithm(input):
+            output = ""
+
+            for element in input.replace(" ", ""):
+                if (element not in ord_of_precedence) and (element not in ("(", ")")):
+                    output += element
+                elif element in ("(", ")"):
+                    if element == "(":
+                        ops.push(element)
+                    elif element == ")":
+                        while (ops.peek() != None) and (ops.peek() != "("):
+                            output += ops.pop()
+                        ops.pop()
+                elif element in ord_of_precedence:
+                    while (ops.peek() != None) and (ops.peek() in ord_of_precedence) and (ord_of_precedence[ops.peek()] >= ord_of_precedence[element]):
+                        output += ops.pop()
+                    ops.push(element)
+
+            while ops.peek() != None:
+                output += ops.pop()
+                
+            return output
+
+        result = start_shunting_yard_algorithm(request.form.get('input_infix'))
+
+    return render_template('infixtopostfixconverter.html', result=result)
 
 if __name__ == "__main__":
     app.run(debug=True)

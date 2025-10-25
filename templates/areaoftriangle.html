@@ -11,21 +11,22 @@
     </div>
 
     <div class="terminal-body">
-    <p><span class="guest-prompt">[guest@markfolio]$ </span>Find the area of triangle</p>
+        <p><span class="guest-prompt">[guest@markfolio]$ </span><a href="/works">Go back to My Works</a></p>
+        <p><span class="guest-prompt">[guest@markfolio]$ </span>Find the area of triangle</p>
 
-    <form action="/works/area-of-triangle" method="post">
-        <label for="inputBase"><span class="guest-prompt">[guest@markfolio]$ </span>Enter a base:</label>
-        <input type="number" id="inputBase" name="input_base"><br>
+        <form action="/works/area-of-triangle" method="post">
+            <label for="inputBase"><span class="guest-prompt">[guest@markfolio]$ </span>Enter a base:</label>
+            <input type="number" id="inputBase" name="input_base"><br>
 
-        <label for="inputHeight"><span class="guest-prompt">[guest@markfolio]$ </span>Enter a height:</label>
-        <input type="number" id="inputHeight" name="input_height">
+            <label for="inputHeight"><span class="guest-prompt">[guest@markfolio]$ </span>Enter a height:</label>
+            <input type="number" id="inputHeight" name="input_height">
 
-        <input type="submit" value="Calculate">
-    </form>
+            <input type="submit" value="Calculate">
+        </form>
 
-    {% if result %}
-    <p><span class="guest-prompt">[guest@markfolio]$ </span>Area: {{ result }}</p>
-    {% endif %}
+        {% if result %}
+        <p><span class="guest-prompt">[guest@markfolio]$ </span>Area: {{ result }}</p>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
