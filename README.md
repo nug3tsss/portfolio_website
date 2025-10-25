@@ -1,6 +1,6 @@
 <p align="center">
   <picture>
-    <img src="static/images/website_icon.jpg" alt="Website Icon" width="200">
+    <img src="static/images/portfolio_image.jpg" alt="Website Icon" width="200">
   </picture>
 </p>
 
