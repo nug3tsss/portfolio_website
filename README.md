@@ -17,6 +17,45 @@
 
 ---
 
+---
+
+## 🔭 File Structure
+```bash
+│
+├── modules/
+│   ├── __init__.py
+│   └── stack.py
+│
+├── static/
+│   ├── style.css
+│   └── images/
+│       ├── body_background.png
+│       ├── facebook_icon.png
+│       ├── github_icon.png
+│       ├── phone_icon.jpg
+│       ├── portfolio_image.jpg
+│       ├── profile_img.jpg
+│       └── website_icon.jpg
+│
+└── templates/
+│   ├── areaofcircle.html
+│   ├── areaoftriangle.html
+│   ├── contact.html
+│   ├── home.html
+│   ├── infixtopostfixconverter.html
+│   ├── main.html
+│   ├── profile.html
+│   ├── touppercase.html
+│   └── works.html
+│
+├── app.py
+├── test.py
+├── LICENSE
+├── .gitignore
+├── .gitattributes
+│
+```
+
 ## 📚 Libraries Used
 
 - Flask -> Website Framework
