@@ -55,5 +55,10 @@ def area_of_triangle():
         result = round((0.5 * input_base * input_height), 2)
     return render_template('areaoftriangle.html', result=result)
 
+# "Infix to postfix converter" PAGE
+@app.route('/works/infix-to-postfix-converter', methods=['GET', 'POST'])
+def visualize_linked_list():
+    return render_template('infixtopostfixconverter.html')
+
 if __name__ == "__main__":
     app.run(debug=True)
