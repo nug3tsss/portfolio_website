@@ -17,8 +17,6 @@
 
 ---
 
----
-
 ## 🔭 File Structure
 ```bash
 │
@@ -55,6 +53,8 @@
 ├── .gitattributes
 │
 ```
+
+---
 
 ## 📚 Libraries Used
 
