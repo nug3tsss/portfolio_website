@@ -1,6 +1,6 @@
 <p align="center">
   <picture>
-    <img src="static/images/website_icon.jpg" alt="Website Icon" width="200">
+    <img src="static/images/portfolio_image.jpg" alt="Portfolio Website" width=100%>
   </picture>
 </p>
 
@@ -14,6 +14,45 @@
 - My profile page
 - My programming works (so far)
 - My available contacts online
+
+---
+
+## 🔭 File Structure
+```bash
+│
+├── modules/
+│   ├── __init__.py
+│   └── stack.py
+│
+├── static/
+│   ├── style.css
+│   └── images/
+│       ├── body_background.png
+│       ├── facebook_icon.png
+│       ├── github_icon.png
+│       ├── phone_icon.jpg
+│       ├── portfolio_image.jpg
+│       ├── profile_img.jpg
+│       └── website_icon.jpg
+│
+└── templates/
+│   ├── areaofcircle.html
+│   ├── areaoftriangle.html
+│   ├── contact.html
+│   ├── home.html
+│   ├── infixtopostfixconverter.html
+│   ├── main.html
+│   ├── profile.html
+│   ├── touppercase.html
+│   └── works.html
+│
+├── app.py
+├── test.py
+├── LICENSE
+├── .gitignore
+├── .gitattributes
+│
+```
 
 ---
 
